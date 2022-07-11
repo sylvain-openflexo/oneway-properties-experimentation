@@ -10,10 +10,12 @@ public class ProcessProperties {
 
   public ProcessDefinition processDefinition;
   public List processExecutions;
+  public BPMNEditor bpmnEditor;
 
   @CreationScheme  
   ProcessProperties:init(EMFModelResource bpmnResource) {  
-    processDefinition = ProcessDefinition.init(parameters.bpmnResource);  
+    bpmnEditor = BPMNEditor.create(parameters.bpmnResource);    
+    processDefinition = ProcessDefinition.init();  
   }  
 
 }

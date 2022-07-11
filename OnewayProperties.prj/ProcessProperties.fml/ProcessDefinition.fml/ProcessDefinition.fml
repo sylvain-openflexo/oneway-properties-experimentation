@@ -9,11 +9,33 @@ use org.openflexo.technologyadapter.emf.EMFModelSlot;
 @VirtualModel(uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml")
 public class ProcessDefinition {
 
-  ModelSlot bpmn type=EMFModelSlot$EMFModelSlotImpl_$$_jvst2a2_7b conformTo="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" required=true readOnly=false;
+  public Process process;
 
   @CreationScheme  
-  ProcessDefinition:init(EMFModelResource bpmnResource) {  
-    bpmn = parameters.bpmnResource.resourceData;  
+  ProcessDefinition:init() {  
+    process = bpmnEditor.model.SelectUniqueFlexoConceptInstance(type=Process);    
+    for (aTask : bpmnEditor.model.SelectFlexoConceptInstance(type=Task)) {    
+      log ("Found task " + aTask)      
+      ActivityDefinition.create(aTask)    
+    }  
+  }  
+
+
+  @FlexoConcept  
+  public class ActivityDefinition {  
+  
+    public Task task;  
+  
+    @CreationScheme    
+    ActivityDefinition:create(Task aTask) {    
+      task = parameters.aTask;    
+    }    
+  
+    @DeletionScheme    
+    Void delete() {    
+      
+    }    
+  
   }  
 
 }
