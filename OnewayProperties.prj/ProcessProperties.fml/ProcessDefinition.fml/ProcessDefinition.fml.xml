@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VirtualModel id="SYL-1" virtualModelClass="org.openflexo.foundation.fml.VirtualModel" modelVersion="2.0" version="0.1" uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml" visibility="Public" name="ProcessDefinition" author="sylvainguerin" userID="SYL" flexoID="1">
+  <UseModelSlotDeclaration id="0" modelSlotClass="org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot" userID="SYL" flexoID="-1" />
+  <UseModelSlotDeclaration id="1" modelSlotClass="org.openflexo.technologyadapter.emf.EMFModelSlot" userID="SYL" flexoID="-1" />
+  <Inspector id="SYL-2" inspectorTitle="ProcessDefinition" userID="SYL" flexoID="2" />
+  <EMFModelSlot id="SYL-7" metaModelURI="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" isRequired="true" cloningStrategy="Reference" cardinality="ZeroOne" name="bpmn" userID="SYL" flexoID="7" />
+  <CreationScheme id="SYL-8" label="init" name="init" width="800" height="600" userID="SYL" flexoID="8">
+    <BehaviourControlGraph_AssignationAction id="SYL-12" assign="bpmn" userID="SYL" flexoID="12">
+      <AssignableAction_ExpressionAction id="SYL-11" expression="parameters.bpmnResource.resourceData" userID="SYL" flexoID="11" />
+    </BehaviourControlGraph_AssignationAction>
+    <GenericBehaviourParameter id="SYL-10" widget="CUSTOM_WIDGET" name="bpmnResource" type="org.openflexo.foundation.resource.FlexoResourceType&lt;org.openflexo.technologyadapter.emf.model.EMFModel&gt;" userID="SYL" flexoID="10" />
+  </CreationScheme>
+</VirtualModel>

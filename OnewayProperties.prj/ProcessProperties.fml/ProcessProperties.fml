@@ -1,0 +1,19 @@
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot;
+
+/**
+ * 
+ * @author sylvainguerin
+ * @version 0.1
+ */
+@VirtualModel(uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml")
+public class ProcessProperties {
+
+  public ProcessDefinition processDefinition;
+  public List processExecutions;
+
+  @CreationScheme  
+  ProcessProperties:init(EMFModelResource bpmnResource) {  
+    processDefinition = ProcessDefinition.init(parameters.bpmnResource);  
+  }  
+
+}

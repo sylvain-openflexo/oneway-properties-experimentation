@@ -1,0 +1,19 @@
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot;
+use org.openflexo.technologyadapter.emf.EMFModelSlot;
+
+/**
+ * 
+ * @author sylvainguerin
+ * @version 0.1
+ */
+@VirtualModel(uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml")
+public class ProcessDefinition {
+
+  ModelSlot bpmn type=EMFModelSlot$EMFModelSlotImpl_$$_jvst2a2_7b conformTo="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" required=true readOnly=false;
+
+  @CreationScheme  
+  ProcessDefinition:init(EMFModelResource bpmnResource) {  
+    bpmn = parameters.bpmnResource.resourceData;  
+  }  
+
+}

@@ -1,0 +1,9 @@
+
+/**
+ * 
+ * @author sylvainguerin
+ * @version 0.1
+ */
+@VirtualModel(uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessExecution.fml")
+public class ProcessExecution {
+}
