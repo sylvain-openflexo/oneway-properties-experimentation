@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<VirtualModel id="SYL-1" virtualModelClass="org.openflexo.foundation.fml.VirtualModel" modelVersion="2.0" version="0.1" uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml" visibility="Public" name="ProcessProperties" author="sylvainguerin" userID="SYL" flexoID="1">
+<VirtualModel id="SYL-1" virtualModelClass="org.openflexo.foundation.fml.VirtualModel" modelVersion="2.0" uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml" version="0.1" visibility="Public" name="ProcessProperties" author="sylvainguerin" userID="SYL" flexoID="1">
   <UseModelSlotDeclaration id="0" modelSlotClass="org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot" userID="SYL" flexoID="-1" />
   <Inspector id="SYL-2" inspectorTitle="ProcessProperties" userID="SYL" flexoID="2" />
   <FMLRTVirtualModelInstanceModelSlot id="SYL-6" virtualModelURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml" isRequired="true" cloningStrategy="Reference" cardinality="ZeroOne" name="processDefinition" userID="SYL" flexoID="6" />
   <FMLRTVirtualModelInstanceModelSlot id="SYL-7" virtualModelURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessExecution.fml" isRequired="true" cloningStrategy="Reference" cardinality="ZeroMany" name="processExecutions" userID="SYL" flexoID="7" />
   <FMLRTVirtualModelInstanceModelSlot id="SYL-21" virtualModelURI="http://openflexo.org/modellers/resources/BPMN/FML/BPMNEditor.fml" isRequired="true" cloningStrategy="Reference" cardinality="ZeroOne" name="bpmnEditor" userID="SYL" flexoID="21" />
   <FMLRTVirtualModelInstanceModelSlot id="SYL-41" virtualModelURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/Properties.fml" isRequired="true" cloningStrategy="Reference" cardinality="ZeroOne" name="properties" userID="SYL" flexoID="41" />
-  <CreationScheme id="SYL-8" label="init" name="init" width="800" height="600" userID="SYL" flexoID="8">
+  <CreationScheme id="SYL-8" label="init" width="800" name="init" height="600" userID="SYL" flexoID="8">
     <BehaviourControlGraph_Sequence id="SYL-29" userID="SYL" flexoID="29">
       <ControlGraph2_Sequence id="SYL-37" ownerContext="controlGraph2" userID="SYL" flexoID="37">
         <ControlGraph2_Sequence id="SYL-45" ownerContext="controlGraph2" userID="SYL" flexoID="45">

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<VirtualModel id="SYL-1" virtualModelClass="org.openflexo.foundation.fml.VirtualModel" modelVersion="2.0" version="0.1" uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/Properties.fml" visibility="Public" name="Properties" author="sylvainguerin" userID="SYL" flexoID="1">
+<VirtualModel id="SYL-1" virtualModelClass="org.openflexo.foundation.fml.VirtualModel" modelVersion="2.0" uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/Properties.fml" version="0.1" visibility="Public" name="Properties" author="sylvainguerin" userID="SYL" flexoID="1">
   <FlexoConcept id="SYL-6" visibility="Public" name="Property" userID="SYL" flexoID="6">
-    <Inspector id="SYL-7" inspectorTitle="Property" userID="SYL" flexoID="7" />
+    <Inspector id="SYL-7" inspectorTitle="Property" userID="SYL" flexoID="7">
+      <InspectorEntry id="SYL-42" widget="TEXT_FIELD" data="name" name="name" label="name" type="java.lang.String" userID="SYL" flexoID="42" />
+      <InspectorEntry id="SYL-44" container="container.container.virtualModel.getVirtualModelNamed(&quot;ProcessExecution&quot;)" widget="CUSTOM_WIDGET" data="expression" name="expression" label="expression" type="org.openflexo.connie.DataBinding" userID="SYL" flexoID="44" />
+      <InspectorEntry id="SYL-43" widget="TEXT_AREA" data="description" name="description" label="description" type="java.lang.String" userID="SYL" flexoID="43" />
+    </Inspector>
     <PrimitiveRole id="SYL-13" primitiveType="String" cloningStrategy="Clone" cardinality="ZeroOne" name="name" userID="SYL" flexoID="13" />
     <PrimitiveRole id="SYL-14" primitiveType="String" cloningStrategy="Clone" cardinality="ZeroOne" name="description" userID="SYL" flexoID="14" />
-    <CreationScheme id="SYL-11" label="create" name="create" width="800" height="600" userID="SYL" flexoID="11">
+    <FMLDataBindingRole id="SYL-35" declaredType="java.lang.String" container="container.container.virtualModel.getVirtualModelNamed(&quot;ProcessExecution&quot;)" cloningStrategy="Clone" cardinality="ZeroOne" name="expression" userID="SYL" flexoID="35" />
+    <CreationScheme id="SYL-11" label="create" width="800" name="create" height="600" userID="SYL" flexoID="11">
       <BehaviourControlGraph_Sequence id="SYL-15" userID="SYL" flexoID="15">
         <ControlGraph2_AssignationAction id="SYL-16" assign="description" ownerContext="controlGraph2" userID="SYL" flexoID="16">
           <AssignableAction_ExpressionAction id="SYL-17" expression="parameters.aDescription" userID="SYL" flexoID="17" />
@@ -16,7 +21,7 @@
       <GenericBehaviourParameter id="SYL-20" isRequired="true" widget="TEXT_FIELD" name="aName" type="java.lang.String" userID="SYL" flexoID="20" />
       <GenericBehaviourParameter id="SYL-21" isRequired="true" widget="TEXT_FIELD" name="aDescription" type="java.lang.String" userID="SYL" flexoID="21" />
     </CreationScheme>
-    <DeletionScheme id="SYL-12" label="delete" name="delete" width="800" height="600" userID="SYL" flexoID="12">
+    <DeletionScheme id="SYL-12" label="delete" width="800" name="delete" height="600" userID="SYL" flexoID="12">
       <BehaviourControlGraph_Sequence id="SYL-22" userID="SYL" flexoID="22">
         <ControlGraph2_AssignationAction id="SYL-23" assign="description" ownerContext="controlGraph2" userID="SYL" flexoID="23">
           <AssignableAction_ExpressionAction id="SYL-24" expression="null" userID="SYL" flexoID="24" />
@@ -27,8 +32,9 @@
       </BehaviourControlGraph_Sequence>
     </DeletionScheme>
   </FlexoConcept>
+  <UseModelSlotDeclaration id="0" modelSlotClass="org.openflexo.foundation.fml.ta.FMLModelSlot" userID="SYL" flexoID="-1" />
   <Inspector id="SYL-2" inspectorTitle="Properties" userID="SYL" flexoID="2" />
-  <CreationScheme id="SYL-27" label="init" name="init" width="800" height="600" userID="SYL" flexoID="27">
+  <CreationScheme id="SYL-27" label="init" width="800" name="init" height="600" userID="SYL" flexoID="27">
     <BehaviourControlGraph_EmptyControlGraph id="SYL-28" userID="SYL" flexoID="28" />
   </CreationScheme>
 </VirtualModel>

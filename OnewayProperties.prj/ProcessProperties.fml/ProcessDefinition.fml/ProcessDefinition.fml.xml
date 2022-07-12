@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<VirtualModel id="SYL-1" virtualModelClass="org.openflexo.foundation.fml.VirtualModel" modelVersion="2.0" version="0.1" uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml" visibility="Public" name="ProcessDefinition" author="sylvainguerin" userID="SYL" flexoID="1">
+<VirtualModel id="SYL-1" virtualModelClass="org.openflexo.foundation.fml.VirtualModel" modelVersion="2.0" uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml" version="0.1" visibility="Public" name="ProcessDefinition" author="sylvainguerin" userID="SYL" flexoID="1">
   <FlexoConcept id="SYL-21" visibility="Public" name="ActivityDefinition" userID="SYL" flexoID="21">
     <Inspector id="SYL-22" inspectorTitle="ActivityDefinition" userID="SYL" flexoID="22" />
     <FlexoConceptInstanceRole id="SYL-30" virtualModelInstance="bpmnEditor.model" flexoConceptTypeURI="http://openflexo.org/modellers/resources/BPMN/FML/BPMNEditor.fml/BPMNModel.fml#Task" cloningStrategy="Reference" cardinality="ZeroOne" name="task" userID="SYL" flexoID="30" />

@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<VirtualModel id="SYL-1" virtualModelClass="org.openflexo.foundation.fml.VirtualModel" modelVersion="2.0" version="0.1" uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessExecution.fml" visibility="Public" name="ProcessExecution" author="sylvainguerin" userID="SYL" flexoID="1">
+<VirtualModel id="SYL-1" virtualModelClass="org.openflexo.foundation.fml.VirtualModel" modelVersion="2.0" uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessExecution.fml" version="0.1" visibility="Public" name="ProcessExecution" author="sylvainguerin" userID="SYL" flexoID="1">
+  <FlexoEnum id="SYL-14" name="ProcessStatus" userID="SYL" flexoID="14">
+    <Value_FlexoEnumValue id="SYL-28" name="IDLE" userID="SYL" flexoID="28">
+      <Inspector id="SYL--1" inspectorTitle="IDLE" userID="SYL" flexoID="-1" />
+    </Value_FlexoEnumValue>
+    <Value_FlexoEnumValue id="SYL-29" name="STARTED" userID="SYL" flexoID="29">
+      <Inspector id="SYL--1" inspectorTitle="STARTED" userID="SYL" flexoID="-1" />
+    </Value_FlexoEnumValue>
+    <Value_FlexoEnumValue id="SYL-30" name="FINISHED" userID="SYL" flexoID="30">
+      <Inspector id="SYL--1" inspectorTitle="FINISHED" userID="SYL" flexoID="-1" />
+    </Value_FlexoEnumValue>
+    <Inspector id="SYL-15" inspectorTitle="ProcessStatus" userID="SYL" flexoID="15" />
+  </FlexoEnum>
+  <FlexoConcept id="SYL-20" visibility="Public" name="ActivityInstance" userID="SYL" flexoID="20">
+    <Inspector id="SYL-21" inspectorTitle="ActivityInstance" userID="SYL" flexoID="21" />
+    <FlexoConceptInstanceRole id="SYL-27" virtualModelInstance="container.processDefinition" flexoConceptTypeURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml#ActivityDefinition" cloningStrategy="Reference" cardinality="ZeroOne" name="activityDefinition" userID="SYL" flexoID="27" />
+    <CreationScheme id="SYL-25" label="create" width="800" name="create" height="600" userID="SYL" flexoID="25">
+      <BehaviourControlGraph_EmptyControlGraph id="SYL-31" userID="SYL" flexoID="31" />
+    </CreationScheme>
+    <DeletionScheme id="SYL-26" label="delete" width="800" name="delete" height="600" userID="SYL" flexoID="26">
+      <BehaviourControlGraph_EmptyControlGraph id="SYL-32" userID="SYL" flexoID="32" />
+    </DeletionScheme>
+  </FlexoConcept>
   <UseModelSlotDeclaration id="0" modelSlotClass="org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot" userID="SYL" flexoID="-1" />
   <Inspector id="SYL-2" inspectorTitle="ProcessExecution" userID="SYL" flexoID="2" />
   <FMLRTVirtualModelInstanceModelSlot id="SYL-6" virtualModelURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml" isRequired="true" cloningStrategy="Reference" cardinality="ZeroOne" name="process" userID="SYL" flexoID="6" />
+  <FlexoConceptInstanceRole id="SYL-19" virtualModelInstance="this" flexoConceptTypeURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessExecution.fml#ProcessStatus" cloningStrategy="Reference" cardinality="ZeroOne" name="status" userID="SYL" flexoID="19" />
   <CreationScheme id="SYL-7" label="init" width="800" name="init" height="600" userID="SYL" flexoID="7">
     <BehaviourControlGraph_AssignationAction id="SYL-9" assign="process" userID="SYL" flexoID="9">
       <AssignableAction_ExpressionAction id="SYL-8" expression="parameters.aProcess" userID="SYL" flexoID="8" />

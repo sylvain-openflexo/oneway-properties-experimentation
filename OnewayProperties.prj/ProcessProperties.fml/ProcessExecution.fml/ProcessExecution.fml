@@ -9,10 +9,33 @@ use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot;
 public class ProcessExecution {
 
   public ProcessDefinition process;
+  public ProcessStatus status;
 
   @CreationScheme  
   ProcessExecution:init(ProcessDefinition aProcess) {  
     process = parameters.aProcess;  
+  }  
+
+
+  @FlexoConcept  
+  public class ProcessStatus {  
+  }  
+
+  @FlexoConcept  
+  public class ActivityInstance {  
+  
+    public ActivityDefinition activityDefinition;  
+  
+    @CreationScheme    
+    ActivityInstance:create() {    
+      
+    }    
+  
+    @DeletionScheme    
+    Void delete() {    
+      
+    }    
+  
   }  
 
 }
