@@ -1,0 +1,36 @@
+
+/**
+ * 
+ * @author sylvainguerin
+ * @version 0.1
+ */
+@VirtualModel(uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/Properties.fml")
+public class Properties {
+
+  @CreationScheme  
+  Properties:init() {  
+  
+  }  
+
+
+  @FlexoConcept  
+  public class Property {  
+  
+    public String name;  
+    public String description;  
+  
+    @CreationScheme    
+    Property:create(String aName, String aDescription) {    
+      name = parameters.aName;      
+      description = parameters.aDescription;    
+    }    
+  
+    @DeletionScheme    
+    Void delete() {    
+      name = null;      
+      description = null;    
+    }    
+  
+  }  
+
+}

@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VirtualModel id="SYL-1" virtualModelClass="org.openflexo.foundation.fml.VirtualModel" modelVersion="2.0" version="0.1" uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessExecution.fml" visibility="Public" name="ProcessExecution" author="sylvainguerin" userID="SYL" flexoID="1">
+  <UseModelSlotDeclaration id="0" modelSlotClass="org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot" userID="SYL" flexoID="-1" />
   <Inspector id="SYL-2" inspectorTitle="ProcessExecution" userID="SYL" flexoID="2" />
+  <FMLRTVirtualModelInstanceModelSlot id="SYL-6" virtualModelURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml" isRequired="true" cloningStrategy="Reference" cardinality="ZeroOne" name="process" userID="SYL" flexoID="6" />
+  <CreationScheme id="SYL-7" label="init" width="800" name="init" height="600" userID="SYL" flexoID="7">
+    <BehaviourControlGraph_AssignationAction id="SYL-9" assign="process" userID="SYL" flexoID="9">
+      <AssignableAction_ExpressionAction id="SYL-8" expression="parameters.aProcess" userID="SYL" flexoID="8" />
+    </BehaviourControlGraph_AssignationAction>
+    <GenericBehaviourParameter id="SYL-10" widget="CUSTOM_WIDGET" name="aProcess" type="org.openflexo.foundation.fml.VirtualModelInstanceType&lt;http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml&gt;" userID="SYL" flexoID="10" />
+  </CreationScheme>
 </VirtualModel>

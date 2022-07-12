@@ -5,11 +5,24 @@
   <FMLRTVirtualModelInstanceModelSlot id="SYL-6" virtualModelURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml" isRequired="true" cloningStrategy="Reference" cardinality="ZeroOne" name="processDefinition" userID="SYL" flexoID="6" />
   <FMLRTVirtualModelInstanceModelSlot id="SYL-7" virtualModelURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessExecution.fml" isRequired="true" cloningStrategy="Reference" cardinality="ZeroMany" name="processExecutions" userID="SYL" flexoID="7" />
   <FMLRTVirtualModelInstanceModelSlot id="SYL-21" virtualModelURI="http://openflexo.org/modellers/resources/BPMN/FML/BPMNEditor.fml" isRequired="true" cloningStrategy="Reference" cardinality="ZeroOne" name="bpmnEditor" userID="SYL" flexoID="21" />
-  <CreationScheme id="SYL-8" label="init" width="800" name="init" height="600" userID="SYL" flexoID="8">
+  <FMLRTVirtualModelInstanceModelSlot id="SYL-41" virtualModelURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/Properties.fml" isRequired="true" cloningStrategy="Reference" cardinality="ZeroOne" name="properties" userID="SYL" flexoID="41" />
+  <CreationScheme id="SYL-8" label="init" name="init" width="800" height="600" userID="SYL" flexoID="8">
     <BehaviourControlGraph_Sequence id="SYL-29" userID="SYL" flexoID="29">
-      <ControlGraph2_AssignationAction id="SYL-28" assign="processDefinition" ownerContext="controlGraph2" userID="SYL" flexoID="28">
-        <AssignableAction_AddVirtualModelInstance id="SYL-27" virtualModelInstanceName="&quot;processDefinition&quot;" creationSchemeURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml.init()" flexoConceptTypeURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml" receiver="this" userID="SYL" flexoID="27" />
-      </ControlGraph2_AssignationAction>
+      <ControlGraph2_Sequence id="SYL-37" ownerContext="controlGraph2" userID="SYL" flexoID="37">
+        <ControlGraph2_Sequence id="SYL-45" ownerContext="controlGraph2" userID="SYL" flexoID="45">
+          <ControlGraph2_AssignationAction id="SYL-44" assign="properties" ownerContext="controlGraph2" userID="SYL" flexoID="44">
+            <AssignableAction_AddVirtualModelInstance id="SYL-43" virtualModelInstanceName="&quot;properties&quot;" creationSchemeURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/Properties.fml.init()" flexoConceptTypeURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/Properties.fml" receiver="this" userID="SYL" flexoID="43" />
+          </ControlGraph2_AssignationAction>
+          <ControlGraph1_AddToListAction id="SYL-36" list="processExecutions" ownerContext="controlGraph1" userID="SYL" flexoID="36">
+            <AssignableAction_AddVirtualModelInstance id="SYL-34" virtualModelInstanceName="&quot;defaultExecution&quot;" creationSchemeURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessExecution.fml.init(aProcess)" flexoConceptTypeURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessExecution.fml" receiver="this" userID="SYL" flexoID="34">
+              <AddFlexoConceptInstanceParameter id="SYL-35" paramName="aProcess" value="processDefinition" userID="SYL" flexoID="35" />
+            </AssignableAction_AddVirtualModelInstance>
+          </ControlGraph1_AddToListAction>
+        </ControlGraph2_Sequence>
+        <ControlGraph1_AssignationAction id="SYL-28" assign="processDefinition" ownerContext="controlGraph1" userID="SYL" flexoID="28">
+          <AssignableAction_AddVirtualModelInstance id="SYL-27" virtualModelInstanceName="&quot;processDefinition&quot;" creationSchemeURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml.init()" flexoConceptTypeURI="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessDefinition.fml" receiver="this" userID="SYL" flexoID="27" />
+        </ControlGraph1_AssignationAction>
+      </ControlGraph2_Sequence>
       <ControlGraph1_AssignationAction id="SYL-17" assign="bpmnEditor" ownerContext="controlGraph1" userID="SYL" flexoID="17">
         <AssignableAction_AddVirtualModelInstance id="SYL-12" virtualModelInstanceName="&quot;bpmnEditor&quot;" creationSchemeURI="http://openflexo.org/modellers/resources/BPMN/FML/BPMNEditor.fml.create(bpmnResource)" flexoConceptTypeURI="http://openflexo.org/modellers/resources/BPMN/FML/BPMNEditor.fml" receiver="this" userID="SYL" flexoID="12">
           <AddFlexoConceptInstanceParameter id="SYL-22" paramName="bpmnResource" value="parameters.bpmnResource" userID="SYL" flexoID="22" />

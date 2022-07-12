@@ -1,3 +1,4 @@
+use org.openflexo.foundation.fml.rt.FMLRTVirtualModelInstanceModelSlot;
 
 /**
  * 
@@ -6,4 +7,12 @@
  */
 @VirtualModel(uri="http://www.openflexo.org/projects/2022/7/OnewayProperties_1657268556766.prj/ProcessProperties.fml/ProcessExecution.fml")
 public class ProcessExecution {
+
+  public ProcessDefinition process;
+
+  @CreationScheme  
+  ProcessExecution:init(ProcessDefinition aProcess) {  
+    process = parameters.aProcess;  
+  }  
+
 }
